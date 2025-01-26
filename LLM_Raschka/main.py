@@ -1,0 +1,1 @@
+print("Bachelor 2025")
