@@ -8,6 +8,7 @@ with open('LLM_Raschka/the-verdict.txt', 'r', encoding='utf-8') as f:
 preprocessed = re.split(r'([,.:;?_!"()\']|--|\s)', raw_text)
 preprocessed = [item.strip() for item in preprocessed if item.strip()]
 
+# Liste mit allen eindeutigten Tokens, alphabetisch sortiert
 all_words = sorted(set(preprocessed))
 
 # erstell ein Dictonary mit den Token
@@ -41,5 +42,6 @@ ids = tokenizer.encode(text)
 print(ids)
 print(tokenizer.decoder(ids))
 
+# Dieser Aufruf würde nun ein Fehler verursachen, da dass Wort 'Hello' nicht mit in der Token-Liste enthalten ist. 
 text2 = "Hello, do you like tea?"
 print(tokenizer.encode(text2))
