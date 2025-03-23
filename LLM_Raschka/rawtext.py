@@ -14,7 +14,10 @@ preprocessed = [item.strip() for item in preprocessed if item.strip()]
 # print die ersten 30 Tokens
 #print(preprocessed[:30])
 
+# Liste mit allen eindeutigten Tokens, alphabetisch sortiert
 all_words = sorted(set(preprocessed))
+
+# Größe des Liste
 vocab_size = len(all_words)
 print(vocab_size)
 
